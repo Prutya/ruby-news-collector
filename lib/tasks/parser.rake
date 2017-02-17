@@ -1,9 +1,7 @@
 namespace :parser do
-  WEBSITE = 'https://news.ycombinator.com'
-
-  desc "parses <number> pages from #{WEBSITE}"
+  desc "starts ParserWorker passing :number into it"
   task :parse, [:number] => :environment do |_, args|
-    
+    ParserWorker.perform_async(args[:number])
   end
 
 end
