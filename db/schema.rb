@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170217182515) do
+ActiveRecord::Schema.define(version: 20170217183408) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "author",     null: false
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20170217182515) do
     t.string   "url",        null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "website_id"
+    t.index ["website_id"], name: "index_posts_on_website_id", unique: true
   end
 
 end
