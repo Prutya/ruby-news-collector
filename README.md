@@ -16,7 +16,12 @@ $ brew services start redis
 ```bash
 $ sidekiq
 ```
+* Run server
+```bash
+$ rails server
+```
 * Run rake task
 ```bash
 $ rake parser:parse[100]
 ```
+* Visit localhost:3000
