@@ -1,0 +1,12 @@
+/*
+ *= require_self
+ */
+
+@import "base/variables";
+@import "base/mixins";
+
+@import "common/normalize";
+
+@import "posts/posts";
+
+@import "pagination/pagination";

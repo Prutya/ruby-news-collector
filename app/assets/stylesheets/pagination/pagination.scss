@@ -1,0 +1,51 @@
+.pagination {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+
+  .page {
+    display: inline-block;
+    background-color: $main-color;
+    color: $text-color-alt;
+    min-width: 40px;
+
+    a {
+      display: inline-block;
+      color: inherit;
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      font-weight: 200;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: $main-color-lighter;
+      }
+    }
+  }
+
+  .current, .gap {
+    padding: 10px;
+  }
+
+  .current {
+    background-color: $main-color-lighter;
+  }
+
+  .prev {
+    @extend .page;
+  }
+
+  .next {
+    @extend .page;
+  }
+
+  .first {
+    @extend .page;
+  }
+
+  .last {
+    @extend .page;
+  }
+}

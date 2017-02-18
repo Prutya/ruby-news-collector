@@ -1,0 +1,35 @@
+.posts {
+  width: 980px;
+  margin: auto;
+
+  &__heading {
+    padding: 20px;
+    text-align: center;
+    background-color: $main-color;
+    color: $text-color-alt;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+
+  &__table {
+    width: 100%;
+    margin-bottom: 20px;
+
+    &__header {
+
+      &__item {
+        background-color: $main-color;
+        color: $text-color-alt;
+        padding: 10px;
+        font-weight: 200;
+        text-transform: uppercase;
+      }
+    }
+
+    &__body {
+      &__item {
+        padding: 10px;
+      }
+    }
+  }
+}

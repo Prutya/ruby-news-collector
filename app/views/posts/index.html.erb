@@ -1,27 +1,29 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>News Id</th>
-      <th>Author</th>
-      <th>Title</th>
-      <th>Url</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @posts.each do |post| %>
+<section class="posts">
+  <h1 class="posts__heading">Posts</h1>
+  <table class="posts__table">
+    <thead class="posts__table__header">
       <tr>
-        <td><%= post.id %></td>
-        <td><%= post.website_id %></td>
-        <td><%= post.author %></td>
-        <td><%= post.title %></td>
-        <td><%= post.url %></td>
+        <th class="posts__table__header__item">Id</th>
+        <th class="posts__table__header__item">HackerNews Id</th>
+        <th class="posts__table__header__item">Author</th>
+        <th class="posts__table__header__item">Article</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td class="posts__table__body__item"><%= post.id %></td>
+          <td class="posts__table__body__item"><%= post.website_id %></td>
+          <td class="posts__table__body__item"><%= post.author %></td>
+          <td class="posts__table__body__item">
+            <a href="<%= post.url %>" target="_blank">
+              <%= post.title %>
+            </a>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= paginate @posts %>
+  <%= paginate @posts %>
+</section>
