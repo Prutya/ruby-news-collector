@@ -12,7 +12,7 @@ gem 'sidekiq',     '4.2.9'
 gem 'puma',        '~> 3.0'
 gem 'sass-rails',  '~> 5.0'
 gem 'rest-client', '2.0.0'
-
+gem 'kaminari',    '1.0.1'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
