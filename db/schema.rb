@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170217183408) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "posts", force: :cascade do |t|
     t.string   "author",     null: false
     t.string   "title",      null: false
@@ -19,7 +22,7 @@ ActiveRecord::Schema.define(version: 20170217183408) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "website_id"
-    t.index ["website_id"], name: "index_posts_on_website_id", unique: true
+    t.index ["website_id"], name: "index_posts_on_website_id", unique: true, using: :btree
   end
 
 end

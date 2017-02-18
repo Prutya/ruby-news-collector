@@ -7,7 +7,7 @@ end
 
 
 gem 'rails',       '~> 5.0.1'
-gem 'sqlite3',     '1.3.13'
+gem 'pg',          '0.19.0'
 gem 'sidekiq',     '4.2.9'
 gem 'puma',        '~> 3.0'
 gem 'sass-rails',  '~> 5.0'
